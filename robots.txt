@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /admin/
+Disallow: /analysis/ffb.html
+Disallow: /analysis/Facebook - 登入或註冊_files/
