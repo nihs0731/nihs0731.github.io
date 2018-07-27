@@ -14,9 +14,9 @@
 <h2 id="Qhead">Question Title</h2>
 <p id="Qbody">
 	<ol>
-<li class="Qans" id="a1">Answer1</li>
-<li class="Qans" id="a2">Answer2</li>
-<li class="Qans" id="a3">Answer3</li>
+<li class="Qans" id="a1" onClick="ans1()">Answer1</li>
+<li class="Qans" id="a2" onClick="ans2()">Answer2</li>
+<li class="Qans" id="a3" onClick="ans3()">Answer3</li>
 	</ol>
 </p>
 </div>
@@ -27,6 +27,7 @@
 <a href="javascript: history.go(-1)">go back</a>
 	<script>
 		Cookies.set("Ttype", "song");
+		Cookies.set("Tpath", "path")
 		Cookies.set("Tscore", "0");
 		var title = document.getElementById("Qhead");
 		var a1 = document.getElementById("a1");
@@ -87,6 +88,22 @@
 					break;
 			}
 		}
+		function ans1() {
+			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+1);
+			question(q+1);
+		}
+		function ans2() {
+			Cookies.set("Tpath", Cookies.get("Tpath")+">2");
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+2);
+			question(q+1);
+		}
+		function ans3() {
+			Cookies.set("Tpath", Cookies.get("Tpath")+">3");
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+3);
+			question(q+1);
+		}
+		
 	</script>
 </body>
 </html>
