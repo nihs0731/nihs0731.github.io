@@ -18,9 +18,41 @@
 <span class="Qans" id="a3">Answer3</span>
 </p>
 </div>
+<div class="w3-light-grey w3-round-xlarge">
+    <div class="w3-center w3-blue w3-round-xlarge" id="bar" style="width:10%">1/6</div>
+</div>
 <a href="javascript: history.go(-1)">go back</a>
 	<script>
 		Cookies.set("Ttype", "song");
+		Cookies.set("Tscore", "0");
+		var title = document.getElementById("Qhead");
+		var a1 = document.getElementById("a1");
+		var a2 = document.getElementById("a2");
+		var a3 = document.getElementById("a3");
+		var bar = document.getElementById("bar");
+		question(1);
+		function question(q) {
+			switch(q) {
+				case 1:
+					title.innerHTML = "Which song do you like most?";
+					a1.innerHTML = "Perfect";
+					a2.innerHTML = "Story of My Life";
+					a3.innerHTML = "Love Story";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "1/6";
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
+			}
+		}
 	</script>
 </body>
 </html>
