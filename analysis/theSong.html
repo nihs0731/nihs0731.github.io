@@ -96,16 +96,22 @@
 			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+1);
 			question(q+1);
+			check();
 		}
 		function ans2() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">2");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+2);
 			question(q+1);
+			check();
 		}
 		function ans3() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">3");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+3);
 			question(q+1);
+			check();
+		}
+		function check() {
+			if(q==7) {location.href="result.html"}
 		}
 		
 	</script>
