@@ -33,26 +33,57 @@
 		var a2 = document.getElementById("a2");
 		var a3 = document.getElementById("a3");
 		var bar = document.getElementById("bar");
+		var q;
 		question(1);
 		function question(q) {
 			switch(q) {
 				case 1:
 					title.innerHTML = "Which song do you like most?";
-					a1.innerHTML = "Perfect";
-					a2.innerHTML = "Story of My Life";
-					a3.innerHTML = "Love Story";
+					a1.innerHTML = "Perfect (Ed Sheeran)";
+					a2.innerHTML = "Story of My Life (One Direction)";
+					a3.innerHTML = "Love Story (Taylor Swift)";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "1/6";
 					break;
 				case 2:
+					title.innerHTML = "Which singer do you like most?";
+					a1.innerHTML = "Taylor Swift";
+					a2.innerHTML = "The Chainsmokers";
+					a3.innerHTML = "Ed Sheeran";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "2/6";
 					break;
 				case 3:
+					title.innerHTML = "Which song do you like most?";
+					a1.innerHTML = "Love Yourself (Justin Bieber)";
+					a2.innerHTML = "Count On Me (Bruno Mars)";
+					a3.innerHTML = "Alone (Alan Walker)";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "3/6";
 					break;
 				case 4:
+					title.innerHTML = "Which singer do you like most?";
+					a1.innerHTML = "Alan Walker";
+					a2.innerHTML = "The Piano Guys";
+					a3.innerHTML = "Luis Fonsi";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "4/6";
 					break;
 				case 5:
+					title.innerHTML = "Which band do you like most?";
+					a1.innerHTML = "Maroon 5";
+					a2.innerHTML = "TWICE (a korea band)";
+					a3.innerHTML = "OneRepublic";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "5/6";
 					break;
 				case 6:
+					title.innerHTML = "Which group do you like most? (There are some foreign group.)";
+					a1.innerHTML = "TFBoys (from China)";
+					a2.innerHTML = "AKB48 (from Japan)";
+					a3.innerHTML = "Black Pink (from Korea)";
+					bar.style.width = 100*q/6+"%";
+					bar.innerHTML = "6/6";
 					break;
 			}
 		}
