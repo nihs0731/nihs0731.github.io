@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0/src/js.cookie.min.js"></script>
 <title>Analysis::Test::theSong - iTruth</title>
+	<style>
+		.Qans {cursor: pointer;}
+	</style>
 </head>
 
 <body class="w3-container w3-center">
@@ -36,7 +39,8 @@
 		var bar = document.getElementById("bar");
 		var q;
 		question(1);
-		function question(q) {
+		function question(nq) {
+			q = nq;
 			switch(q) {
 				case 1:
 					title.innerHTML = "Which song do you like most?";
