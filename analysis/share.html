@@ -43,6 +43,10 @@
     }
 		var score = parseInt(urldata(d98sy));
 		var Judgement;
+	uuu();
+	ooo();
+	iii();
+	function uuu() {
 		if(score <=6) {
 			Judgement = "You are a peaceful person, just sometimes you can't help youself to do some unusual things.";
 		} else if(score > 6 && score <= 12) {
@@ -50,8 +54,9 @@
 		} else {
 			Judgement = "Your friends are all treat you kindly. You are a lucky person!";
 		}
-		document.getElementById("type").innerHTML = "Test Type: " + urldata(type);
-		document.getElementById("path").innerHTML = "Answer Path: path>" + urldata(q7a) + ">" + urldata(qwe) + ">" + urldata(tyy) + ">" + urldata(jpq) + ">" + urldata(hzc) + ">" + urldata(oxp);
+	}
+	function ooo() {document.getElementById("type").innerHTML = "Test Type: " + urldata(type);}
+	function iii() {document.getElementById("path").innerHTML = "Answer Path: path>" + urldata(q7a) + ">" + urldata(qwe) + ">" + urldata(tyy) + ">" + urldata(jpq) + ">" + urldata(hzc) + ">" + urldata(oxp);}
 		document.getElementById("score").innerHTML = "Test Score: " + score.toString() + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
 	function ggy() {
