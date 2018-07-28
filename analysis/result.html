@@ -25,6 +25,7 @@
     <p id="path"></p>
     <p id="score"></p>
     <p id="judgement"></p>
+	  <a id="share"></a>
   </div>
   <a href="javascript: location.href='index.html'">go back</a></div>
 <script>
@@ -41,6 +42,8 @@
 		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
+	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11);
+	        document.getElementById("share").innerHTML = share;
 	function ggy() {
 		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
