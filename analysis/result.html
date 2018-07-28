@@ -43,7 +43,8 @@
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
 	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11)+"&oxp="+Tpath.charAt(15)+"&qwe="+Tpath.charAt(7)+"&hzc="+Tpath.charAt(13);
-	        document.getElementById("share").innerHTML = share;
+	        document.getElementById("share").innerHTML = "SHARE YOUR RESULTS: "+share;
+	        document.getElementById("share").href = share;
 	function ggy() {
 		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
