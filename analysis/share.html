@@ -5,11 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0/src/js.cookie.min.js"></script>
-<script>
-    var Ttype = Cookies.get("Ttype");
-    var Tscore = Cookies.get("Tscore");
-	var Tpath = Cookies.get("Tpath");
-</script>
 <title>Analysis::Result - iTruth</title>
 </head>
 
@@ -46,7 +41,7 @@
     }
     return a;
     }
-		var score = parseInt(Tscore);
+		var score = parseInt(urldata(d98sy));
 		var Judgement;
 		if(score <=6) {
 			Judgement = "You are a peaceful person, just sometimes you can't help youself to do some unusual things.";
@@ -55,8 +50,8 @@
 		} else {
 			Judgement = "Your friends are all treat you kindly. You are a lucky person!";
 		}
-		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
-		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
+		document.getElementById("type").innerHTML = "Test Type: " + urldata(type);
+		document.getElementById("path").innerHTML = "Answer Path: path>" + urldata(q7a) + ">" + urldata(qwe) + ">" + urldata(tyy) + ">" + urldata(jpq) + ">" + urldata(hzc) + ">" + urldata(oxp);
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
 	function ggy() {
