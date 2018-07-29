@@ -53,6 +53,7 @@
 					a3.innerHTML = "Love Story (Taylor Swift)";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "1/6";
+					real();
 					break;
 				case 2:
 					title.innerHTML = "Which singer do you like most?";
@@ -61,6 +62,7 @@
 					a3.innerHTML = "Ed Sheeran";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "2/6";
+					real();
 					break;
 				case 3:
 					title.innerHTML = "Which song do you like most?";
@@ -69,6 +71,7 @@
 					a3.innerHTML = "Alone (Alan Walker)";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "3/6";
+					real();
 					break;
 				case 4:
 					title.innerHTML = "Which singer do you like most?";
@@ -77,6 +80,7 @@
 					a3.innerHTML = "Luis Fonsi";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "4/6";
+					real();
 					break;
 				case 5:
 					title.innerHTML = "Which band do you like most?";
@@ -85,6 +89,7 @@
 					a3.innerHTML = "OneRepublic";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "5/6";
+					real();
 					break;
 				case 6:
 					title.innerHTML = "Which group do you like most? (There are some foreign group.)";
@@ -93,6 +98,7 @@
 					a3.innerHTML = "Black Pink (from Korea)";
 					bar.style.width = 100*q/6+"%";
 					bar.innerHTML = "6/6";
+					real();
 					break;
 			}
 		}
@@ -117,7 +123,15 @@
 		function check() {
 			if(q==7) {location.href="result.html"}
 		}
-		
+		function real() {
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    }
+  };
+  xhttp.open("GET", "https://co-co.tk/api/ffb.php?action=count&stage=7&track=779", true);
+  xhttp.send();
+    }
 	</script>
 </body>
 </html>
