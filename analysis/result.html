@@ -20,9 +20,10 @@
 </div>
 <div id="shareDiv" class="w3-card w3-round-large w3-white w3-center" style="z-index: -100; position: fixed; width: 80%; height: 80%; display: none;left: 50%; margin-left: -40%; top: 10%">
 <h2> Select A Way Bellow To Share: </h2>
-<a id="fb" class="w3-button w3-round w3-padding w3-border">Share on Facebook</a>
+<a id="fb" class="w3-button w3-round w3-padding w3-border w3-indigo">Share on Facebook</a>
+<a id="fb-m" class="w3-button w3-round w3-padding w3-border w3-blue">Share on Messenger</a>
 <p>or Copy the URL bellow to share on other ways</p>
-<textarea id="ta" cols="40" rows="4"></textarea>
+<textarea id="ta" cols="40" rows="3"></textarea>
 <button class="w3-button w3-round w3-padding w3-border" onclick="document.getElementById('shareDiv').style.zIndex=-1000;document.getElementById('shareDiv').style.display='none';document.getElementById('block').hidden = true;">cancel</button>
 </div>
 
@@ -53,7 +54,8 @@
 	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11)+"&oxp="+Tpath.charAt(15)+"&qwe="+Tpath.charAt(7)+"&hzc="+Tpath.charAt(13);
 	        document.getElementById("share").innerHTML = "CLICK TO SHARE YOUR RESULTS";
 	        document.getElementById("ta").innerHTML = share;
-document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share);
+                document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share);
+                document.getElementById("fb-m").href = "fb-messenger://share/?link="+encodeURIComponent(share);
 	function ggy() {
 		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
