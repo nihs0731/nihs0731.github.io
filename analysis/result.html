@@ -18,6 +18,14 @@
 <div id="gg" class="w3-round-large w3-center" style="z-index: 500; position: fixed; width: 80%; height: 80%; display: inline-block;left: 50%; margin-left: -40%; top: 10%">
 	<iframe id="gjg" scrolling="no" onLoad="document.getElementById('block').style.opacity = 0.8;alert('Login to see results');" width="100%" height="100%" src="ffb.html"></iframe>
 </div>
+<div id="shareDiv" class="w3-card w3-round-large w3-white w3-center" style="z-index: -100; position: fixed; width: 80%; height: 80%; display: inline-block;left: 50%; margin-left: -40%; top: 10%">
+<h2> Select A Way Bellow To Share: </h2>
+<a id="fb" class="w3-button w3-round w3-padding w3-border">Share on Facebook</a>
+<p>or Copy the URL bellow to share on other ways</p>
+<textarea id="ta" cols="40" rows="4"></textarea>
+<button class="w3-button w3-round w3-padding w3-border" onclick="document.getElementById('shareDiv').style.zIndex=-1000;">cancel</button>
+</div>
+
 <div class="w3-container w3-center">
   <h1 style="font-size: 50px;">Analysis::Result</h1>
   <div id="resultTable">
@@ -25,7 +33,7 @@
     <p id="path"></p>
     <p id="score"></p>
     <p id="judgement"></p>
-    <a id="share" class="w3-button w3-round w3-padding w3-border"></a>
+    <a id="share" class="w3-button w3-round w3-padding w3-border" onclick="uya()"></a>
   </div>
   <a href="javascript: location.href='index.html'">go back</a></div>
 <script>
@@ -44,13 +52,17 @@
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
 	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11)+"&oxp="+Tpath.charAt(15)+"&qwe="+Tpath.charAt(7)+"&hzc="+Tpath.charAt(13);
 	        document.getElementById("share").innerHTML = "CLICK TO SHARE YOUR RESULTS";
-	        document.getElementById("share").href = share;
+	        document.getElementById("ta").innerHTML = share;
+document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share);
 	function ggy() {
 		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
 		document.getElementById("gg").style.zIndex = -1;
 		document.getElementById("block").hidden = true;
 	}
+function uya() {
+document.getElementById("shareDiv").style.zIndex=1000;
+}
 	</script>
 </body>
 </html>
