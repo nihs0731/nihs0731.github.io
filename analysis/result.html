@@ -21,7 +21,8 @@
 <div id="shareDiv" class="w3-card w3-round-large w3-white w3-center" style="z-index: -100; position: fixed; width: 80%; height: 80%; display: none;left: 50%; margin-left: -40%; top: 10%">
 <h2> Select A Way Bellow To Share: </h2>
 <a id="fb" class="w3-button w3-round w3-padding w3-indigo">Share on Facebook</a><br/><br/>
-<a id="fb-m" class="w3-button w3-round w3-padding w3-blue">Share on Messenger</a>
+<a id="fb-m" class="w3-button w3-round w3-padding w3-blue">Share on Messenger</a><br/><br/>
+<a id="line" class="w3-button w3-round w3-padding w3-green">Share on Line</a>
 <p>or Copy the URL bellow to share on other ways</p>
 <textarea id="ta" cols="40" rows="3"></textarea><br/>
 <button class="w3-button w3-round w3-padding w3-border" onclick="document.getElementById('shareDiv').style.zIndex=-1000;document.getElementById('shareDiv').style.display='none';document.getElementById('block').hidden = true;">cancel</button>
@@ -56,6 +57,7 @@
 	        document.getElementById("ta").innerHTML = share;
                 document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share);
                 document.getElementById("fb-m").href = "fb-messenger://share/?link="+encodeURIComponent(share);
+	        document.getElementById("line").href = "https://line.me/R/msg/text/?分享這篇文章%0D%0A"+encodeURIComponent(share);
 	function ggy() {
 		document.getElementById("gjg").hidden = true;
 		document.getElementById("gg").hidden = true;
