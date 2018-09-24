@@ -51,16 +51,18 @@
 		var a1 = document.getElementById("a1");
 		var a2 = document.getElementById("a2");
 		var a3 = document.getElementById("a3");
+		var a4 = document.getElementById("a4");
 		var bar = document.getElementById("bar");
 		var q;
 		question(0);
 		function question(count) {
-			title.innerHTML = analysis.;
+			tc=count+1;
+			title.innerHTML = analysis.topic[count].head;
 			a1.innerHTML = "TFBoys (from China)";
 			a2.innerHTML = "AKB48 (from Japan)";
 			a3.innerHTML = "Black Pink (from Korea)";
-			bar.style.width = 100*q/6+"%";
-			bar.innerHTML = "6/6";
+			bar.style.width = 100*tc/analysis.count+"%";
+			bar.innerHTML = tc+"/"+analysis.count;
 		}
 		function ans1() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
