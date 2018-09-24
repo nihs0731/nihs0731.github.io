@@ -41,7 +41,7 @@
                         jsonData = this.responseText;
                     }
                 };
-                xhttp.open("GET", urldata("json"), true);
+                xhttp.open("GET", "https://itruth.tk/v2/analysis/test.json", true);
                 xhttp.send();
 		var analysis = JSON.parse(jsonData);
 		Cookies.set("Ttype", "custom");
