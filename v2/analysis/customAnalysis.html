@@ -58,9 +58,10 @@
 		function question(count) {
 			tc=count+1;
 			title.innerHTML = analysis.topic[count].head;
-			a1.innerHTML = "TFBoys (from China)";
-			a2.innerHTML = "AKB48 (from Japan)";
-			a3.innerHTML = "Black Pink (from Korea)";
+			a1.innerHTML = analysis.topic[count].ans1;
+			a2.innerHTML = analysis.topic[count].ans2;
+			a3.innerHTML = analysis.topic[count].ans3;
+			a4.innerHTML = analysis.topic[count].ans4;
 			bar.style.width = 100*tc/analysis.count+"%";
 			bar.innerHTML = tc+"/"+analysis.count;
 		}
