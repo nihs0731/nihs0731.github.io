@@ -34,6 +34,16 @@
 </div>
 <a href="javascript: history.go(-1)">go back</a>
 	<script>
+		var jsonData;
+		var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        jsonData = this.responseText;
+                    }
+                };
+                xhttp.open("GET", urldata("json"), true);
+                xhttp.send();
+		var analysis = JSON.parse(jsonData);
 		Cookies.set("Ttype", "custom");
 		Cookies.set("Tpath", "path")
 		Cookies.set("Tscore", "0");
@@ -43,65 +53,14 @@
 		var a3 = document.getElementById("a3");
 		var bar = document.getElementById("bar");
 		var q;
-		question(1);
-		function question(nq) {
-			q = nq;
-			switch(q) {
-				case 1:
-					title.innerHTML = "Which song do you like most?";
-					a1.innerHTML = "Perfect (Ed Sheeran)";
-					a2.innerHTML = "Story of My Life (One Direction)";
-					a3.innerHTML = "Love Story (Taylor Swift)";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "1/6";
-					real();
-					break;
-				case 2:
-					title.innerHTML = "Which singer do you like most?";
-					a1.innerHTML = "Taylor Swift";
-					a2.innerHTML = "The Chainsmokers";
-					a3.innerHTML = "Ed Sheeran";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "2/6";
-					real();
-					break;
-				case 3:
-					title.innerHTML = "Which song do you like most?";
-					a1.innerHTML = "Love Yourself (Justin Bieber)";
-					a2.innerHTML = "Count On Me (Bruno Mars)";
-					a3.innerHTML = "Alone (Alan Walker)";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "3/6";
-					real();
-					break;
-				case 4:
-					title.innerHTML = "Which singer do you like most?";
-					a1.innerHTML = "Alan Walker";
-					a2.innerHTML = "The Piano Guys";
-					a3.innerHTML = "Luis Fonsi";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "4/6";
-					real();
-					break;
-				case 5:
-					title.innerHTML = "Which band do you like most?";
-					a1.innerHTML = "Maroon 5";
-					a2.innerHTML = "TWICE (a korea band)";
-					a3.innerHTML = "OneRepublic";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "5/6";
-					real();
-					break;
-				case 6:
-					title.innerHTML = "Which group do you like most? (There are some foreign group.)";
-					a1.innerHTML = "TFBoys (from China)";
-					a2.innerHTML = "AKB48 (from Japan)";
-					a3.innerHTML = "Black Pink (from Korea)";
-					bar.style.width = 100*q/6+"%";
-					bar.innerHTML = "6/6";
-					real();
-					break;
-			}
+		question(0);
+		function question(count) {
+			title.innerHTML = analysis.;
+			a1.innerHTML = "TFBoys (from China)";
+			a2.innerHTML = "AKB48 (from Japan)";
+			a3.innerHTML = "Black Pink (from Korea)";
+			bar.style.width = 100*q/6+"%";
+			bar.innerHTML = "6/6";
 		}
 		function ans1() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
