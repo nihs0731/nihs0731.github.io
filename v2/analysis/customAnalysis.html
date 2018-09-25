@@ -46,7 +46,7 @@
         xhttp.open("GET", urldata("json"), false);
         xhttp.send();
 		var analysis = JSON.parse(jsonData);
-		document.getElementById("Atitle") = analysis.title;
+		document.getElementById("Atitle").innerHTML = analysis.title;
 		Cookies.set("Ttype", "custom-"+analysis.title);
 		Cookies.set("Tpath", "path")
 		Cookies.set("Tscore", "0");
