@@ -9,7 +9,18 @@
     var Ttype = Cookies.get("Ttype");
     var Tscore = Cookies.get("Tscore");
     var Tpath = Cookies.get("Tpath");
-    var analysis = JSON.parse(Cookies.get("jsonData"));
+    //var analysis = JSON.parse(Cookies.get("jsonData"));
+	var jsonData;
+		var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                jsonData = this.responseText;
+            }
+        };
+        xhttp.open("GET", urldata("json"), false);
+        xhttp.send();
+	        Cookies.set("jsonData", jsonData);
+		var analysis = JSON.parse(jsonData);
 </script>
 <title>Custom Analysis Results</title>
 </head>
@@ -40,12 +51,12 @@
   </div>
   <a href="javascript: location.href='index.html'">go back</a></div>
 <script>
-		var score = parseInt(Tscore);
-		var Judgement = analysis.judge[Tscore];
+		//var score = parseInt(Tscore);
+		//var Judgement = analysis.judge[Tscore];
 		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
 		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
-		document.getElementById("judgement").innerHTML = "Test Judgement: " + Judgement;
+		document.getElementById("judgement").innerHTML = "Test Judgement: " + analysis.judge[Tscore];
 	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11)+"&oxp="+Tpath.charAt(15)+"&qwe="+Tpath.charAt(7)+"&hzc="+Tpath.charAt(13);
 	        document.getElementById("share").innerHTML = "CLICK TO SHARE YOUR RESULTS";
 	        document.getElementById("ta").innerHTML = share;
