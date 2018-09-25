@@ -8,7 +8,8 @@
 <script>
     var Ttype = Cookies.get("Ttype");
     var Tscore = Cookies.get("Tscore");
-	var Tpath = Cookies.get("Tpath");
+    var Tpath = Cookies.get("Tpath");
+    var analysis = JSON.parse(Cookies.get("jsonData"));
 </script>
 <title>Custom Analysis Results</title>
 </head>
@@ -41,13 +42,7 @@
 <script>
 		var score = parseInt(Tscore);
 		var Judgement;
-		if(score <=6) {
-			Judgement = "You are a peaceful person, just sometimes you can't help youself to do some unusual things.";
-		} else if(score > 6 && score <= 12) {
-			Judgement = "The surface of your interpersonal relationship may be brightly, but inside yourself you think you are not the person everybody likes.";
-		} else {
-			Judgement = "Your friends are all treat you kindly. You are a lucky person!";
-		}
+		Judgement = analysis.judge[score];
 		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
 		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
