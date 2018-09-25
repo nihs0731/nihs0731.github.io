@@ -9,18 +9,6 @@
     var Ttype = Cookies.get("Ttype");
     var Tscore = Cookies.get("Tscore");
     var Tpath = Cookies.get("Tpath");
-    //var analysis = JSON.parse(Cookies.get("jsonData"));
-	var jsonData;
-		var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                jsonData = this.responseText;
-            }
-        };
-        xhttp.open("GET", urldata("json"), false);
-        xhttp.send();
-	        Cookies.set("jsonData", jsonData);
-		var analysis = JSON.parse(jsonData);
 </script>
 <title>Custom Analysis Results</title>
 </head>
@@ -51,6 +39,17 @@
   </div>
   <a href="javascript: location.href='index.html'">go back</a></div>
 <script>
+	var jsonData;
+		var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                jsonData = this.responseText;
+            }
+        };
+        xhttp.open("GET", urldata("json"), false);
+        xhttp.send();
+	        //Cookies.set("jsonData", jsonData);
+		var analysis = JSON.parse(jsonData);
 		//var score = parseInt(Tscore);
 		//var Judgement = analysis.judge[Tscore];
 		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
