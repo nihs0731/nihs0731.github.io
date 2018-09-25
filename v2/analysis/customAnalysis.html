@@ -60,6 +60,7 @@
 		question(0);
 		function question(pcount) {
 			count = pcount;
+			if(count==analysis.count) {location.href="result.html"}
 			tc=count+1;
 			title.innerHTML = analysis.topic[count].head;
 			a1.innerHTML = analysis.topic[count].ans1;
@@ -73,29 +74,29 @@
 			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+1);
 			question(count+1);
-			check();
+			//check();
 		}
 		function ans2() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">2");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+2);
 			question(count+1);
-			check();
+			//check();
 		}
 		function ans3() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">3");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+3);
 			question(count+1);
-			check();
+			//check();
 		}
 		function ans4() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">4");
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+4);
 			question(count+1);
-			check();
+			//check();
 		}
-		function check() {
+		/*function check() {
 			if(count==analysis.count) {location.href="result.html"}
-		}
+		}*/
 	</script>
 </body>
 </html>
