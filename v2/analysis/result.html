@@ -20,6 +20,14 @@
         xhttp.send();
     var analysis = JSON.parse(jsonData);
 	var ansURL;
+	var obj = {
+		"custom": Cookies.get("jsonData"),
+		"count": analysis.count,
+		"title": analysis.title,
+		"score": Tscore,
+		"ans": Tpath
+	}
+	var sdata = JSON.stringify(obj);
 	var xhttp2 = new XMLHttpRequest();
         xhttp2.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -27,7 +35,7 @@
             }
         };
         xhttp2.open("POST", "https://api.myjson.com/bins", false);
-        xhttp2.send();
+        xhttp2.send(sdata);
 </script>
 <title>Custom Analysis Results</title>
 </head>
