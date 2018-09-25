@@ -45,6 +45,7 @@
         };
         xhttp.open("GET", urldata("json"), false);
         xhttp.send();
+	        Cookies.set("jsonData", jsonData);
 		var analysis = JSON.parse(jsonData);
 		document.getElementById("Atitle").innerHTML = analysis.title;
 	        document.title = "Custom Analysis: " + analysis.title;
