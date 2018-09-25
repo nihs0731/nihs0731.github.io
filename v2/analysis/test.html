@@ -48,8 +48,7 @@
         };
         xhttp.open("GET", urldata("json"), false);
         xhttp.send();
-	        //Cookies.set("jsonData", jsonData);
-		var analysis = JSON.parse(jsonData);
+	        Cookies.set("jsonData", jsonData);
 		//var score = parseInt(Tscore);
 		//var Judgement = analysis.judge[Tscore];
 		document.getElementById("type").innerHTML = "Test Type: " + Cookies.get("jsonData");
