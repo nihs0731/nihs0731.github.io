@@ -52,10 +52,10 @@
 		var analysis = JSON.parse(jsonData);
 		//var score = parseInt(Tscore);
 		//var Judgement = analysis.judge[Tscore];
-		document.getElementById("type").innerHTML = "Test Type: " + Ttype;
+		document.getElementById("type").innerHTML = "Test Type: " + Cookies.get("jsonData");
 		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
-		document.getElementById("judgement").innerHTML = "Test Judgement: " + analysis.judge[Tscore];
+		document.getElementById("judgement").innerHTML = "Test Judgement: " + analysis;
 	        var share = "https://itruth.tk/analysis/share.html?type="+Ttype+"&q7a="+Tpath.charAt(5)+"&d98sy="+Tscore+"&tyy="+Tpath.charAt(9)+"&jpq="+Tpath.charAt(11)+"&oxp="+Tpath.charAt(15)+"&qwe="+Tpath.charAt(7)+"&hzc="+Tpath.charAt(13);
 	        document.getElementById("share").innerHTML = "CLICK TO SHARE YOUR RESULTS";
 	        document.getElementById("ta").innerHTML = share;
