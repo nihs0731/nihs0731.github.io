@@ -45,13 +45,13 @@
         };
         xhttp.open("GET", urldata("json"), false);
         xhttp.send();
-	        Cookies.set("jsonData", jsonData);
+	        Cookies.set("jsonData", jsonData, { expires: 3 });
 		var analysis = JSON.parse(jsonData);
 		document.getElementById("Atitle").innerHTML = analysis.title;
 	        document.title = "Custom Analysis: " + analysis.title;
-		Cookies.set("Ttype", "custom-"+analysis.title);
-		Cookies.set("Tpath", "path")
-		Cookies.set("Tscore", "0");
+		Cookies.set("Ttype", "custom-"+analysis.title, { expires: 3 });
+		Cookies.set("Tpath", "path", { expires: 3 })
+		Cookies.set("Tscore", "0", { expires: 3 });
 		var title = document.getElementById("Qhead");
 		var a1 = document.getElementById("a1");
 		var a2 = document.getElementById("a2");
