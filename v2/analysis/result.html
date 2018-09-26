@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0/src/js.cookie.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script>
     var Ttype = Cookies.get("Ttype");
     var Tscore = Cookies.get("Tscore");
@@ -27,15 +28,17 @@
 		"score": Tscore,
 		"ans": Tpath
 	}
-	var sdata = JSON.stringify(obj);
-	var xhttp2 = new XMLHttpRequest();
-        xhttp2.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                ansURL = JSON.parse(this.responseText).uri;
-            }
-        };
-        xhttp2.open("POST", "https://api.myjson.com/bins", false);
-        xhttp2.send(sdata);
+	var data = JSON.stringify(obj);
+$.ajax({
+        url: "https://api.myjson.com/bins",
+        type: "POST",
+        data: data,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+            ansURL = JSON.prase(data);
+        }
+    });
 </script>
 <title>Custom Analysis Results</title>
 </head>
