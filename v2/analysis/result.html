@@ -36,7 +36,8 @@ $.ajax({
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (bdata, textStatus, jqXHR) {
-            ansURL = bdata;
+            ansURL = bdata.uri;
+	    document.title = bdata.uri;
         }
     });
 </script>
@@ -75,7 +76,7 @@ $.ajax({
 		document.getElementById("path").innerHTML = "Answer Path: " + Tpath;
 		document.getElementById("score").innerHTML = "Test Score: " + Tscore + " (This score only use for judge)";
 		document.getElementById("judgement").innerHTML = "Test Judgement: " + analysis.judge[score];
-	        var share = "https://itruth.tk/v2/analysis/share.html?ans="+ansURL.uri;
+	        var share = "https://itruth.tk/v2/analysis/share.html?ans="+ansURL;
 	        document.getElementById("share").innerHTML = "CLICK TO SHARE YOUR RESULTS";
 	        document.getElementById("ta").innerHTML = share;
                 document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share);
