@@ -13,7 +13,7 @@
                 jsonData = this.responseText;
             }
         };
-        xhttp.open("GET", urldata("json"), false);
+        xhttp.open("GET", urldata("ans"), false);
         xhttp.send();
     var analysis = JSON.parse(jsonData);
 	document.title="Shared Result - "+analysis.title;
