@@ -25,7 +25,8 @@
 		"count": analysis.count,
 		"title": analysis.title,
 		"score": Tscore,
-		"ans": Tpath
+		"ans": Tpath,
+		"judge": analysis.judge[Tscore]
 	};
 	var data = JSON.stringify(obj);
 $.ajax({
