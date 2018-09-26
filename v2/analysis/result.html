@@ -20,7 +20,6 @@
         xhttp.open("GET", Cookies.get("jsonData"), false);
         xhttp.send();
     var analysis = JSON.parse(jsonData);
-	var ansURL;
 	var obj = {
 		"custom": Cookies.get("jsonData"),
 		"count": analysis.count,
@@ -33,13 +32,15 @@ $.ajax({
         url: "https://api.myjson.com/bins",
         type: "POST",
         data: data,
+        async: false,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (bdata, textStatus, jqXHR) {
-            ansURL = bdata.uri;
-	    document.title = bdata.uri;
+            document.title = bdata.uri;
         }
     });
+	var ansURL=document.title;
+	document.title="Custom Analysis Results - "+analysis.title;
 </script>
 <title>Custom Analysis Results</title>
 </head>
