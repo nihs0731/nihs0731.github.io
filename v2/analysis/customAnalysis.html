@@ -74,25 +74,41 @@
 		}
 		function ans1() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">1");
+			if (typeof analysis.topic[count].score[0] == 'undefined') {
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+1);
+			} else {
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+analysis.topic[count].score[0]);
+			}
 			question(count+1);
 			//check();
 		}
 		function ans2() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">2");
+			if (typeof analysis.topic[count].score[1] == 'undefined') {
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+2);
+			} else {
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+analysis.topic[count].score[1]);
+			}
 			question(count+1);
 			//check();
 		}
 		function ans3() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">3");
+			if (typeof analysis.topic[count].score[2] == 'undefined') {
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+3);
+			} else {
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+analysis.topic[count].score[2]);
+			}
 			question(count+1);
 			//check();
 		}
 		function ans4() {
 			Cookies.set("Tpath", Cookies.get("Tpath")+">4");
+			if (typeof analysis.topic[count].score[3] == 'undefined') {
 			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+4);
+			} else {
+			Cookies.set("Tscore", parseInt(Cookies.get("Tscore"))+analysis.topic[count].score[3]);
+			}
 			question(count+1);
 			//check();
 		}
