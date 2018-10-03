@@ -30,6 +30,15 @@
       "ans4": "a4"
     }
   ],
+  "judge": [ //score judgement
+    "0", //score 0
+    "1", //score 1
+    "2",  //...
+    "3",
+    "score: 4",
+    "good!",
+    "excellent!"
+    ]
   "title": "title of the test",
   "count": 4 // topics
 }
