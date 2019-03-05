@@ -61,11 +61,11 @@
         <tr id="r2"><th>9:10~10:00</th><td id="l2"></td></tr>
         <tr id="r3"><th>10:10~11:00</th><td id="l3"></td></tr>
         <tr id="r4"><th>11:10~12:00</th><td id="l4"></td></tr>
-        <tr id="r5"><th>13:00~13:50</th><td id="l5"></td></tr>
-        <tr id="r6"><th>14:00~14:50</th><td id="l6"></td></tr>
+        <tr id="r5"><th>13:10~14:00</th><td id="l5"></td></tr>
+        <tr id="r6"><th>14:10~15:00</th><td id="l6"></td></tr>
         <tr id="r7"><th>15:10~16:00</th><td id="l7"></td></tr>
-        <tr id="r8"><th>16:10~17:00</th><td id="l8"></td></tr>
-        <tr class="now"><td id="afterSchool" colspan="2"></td></tr>
+        <tr id="r8" style="display: none"><th>16:20~17:10</th><td id="l8"></td></tr>
+        <tr class="now"><td id="afterSchool" colspan="2" style="color: orange"></td></tr>
     </table>
     <script src="https://cdn.jsdelivr.net/gh/Merret/UsefulJS@0.5.4/js/xhr.js" async></script>
     <script>
@@ -93,7 +93,7 @@
             document.getElementById("l5").innerHTML = ics[today][4];
             document.getElementById("l6").innerHTML = ics[today][5];
             document.getElementById("l7").innerHTML = ics[today][6];
-            document.getElementById("l8").innerHTML = ics[today][7];
+            //document.getElementById("l8").innerHTML = ics[today][7];
             when();
         }
         function f() {
@@ -103,7 +103,7 @@
             w();
         }
         function when() {
-            for(var i = 1; i< 9; i++) {
+            for(var i = 1; i < 8; i++) {
                 document.getElementById("r"+i).className = "";
             }
             document.getElementById("afterSchool").innerHTML = "";
@@ -117,7 +117,7 @@
                 case 13:le = 5;break;
                 case 14:le = 6;break;
                 case 15:le = 7;break;
-                case 16:le = 8;break;
+                //case 16:le = 8;break;
                 default:le = -1;
             }
             if(le>-1) {
