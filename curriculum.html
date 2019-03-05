@@ -94,7 +94,7 @@
             document.getElementById("l5").innerHTML = ics[today][4];
             document.getElementById("l6").innerHTML = ics[today][5];
             document.getElementById("l7").innerHTML = ics[today][6];
-            //document.getElementById("l8").innerHTML = ics[today][7];
+            document.getElementById("l8").innerHTML = ics[today][7];
             when();
         }
         function f() {
@@ -104,7 +104,7 @@
             w();
         }
         function when() {
-            for(var i = 1; i < 8; i++) {
+            for(var i = 1; i < 9; i++) {
                 document.getElementById("r"+i).className = "";
             }
             document.getElementById("afterSchool").innerHTML = "";
@@ -118,7 +118,7 @@
                 case 13:le = 5;break;
                 case 14:le = 6;break;
                 case 15:le = 7;break;
-                //case 16:le = 8;break;
+                case 16:le = 8;break;
                 default:le = -1;
             }
             if(le>-1) {
