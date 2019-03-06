@@ -35,9 +35,22 @@
     <div style="height: 3rem"></div>
     <div class="w3-container w3-center">
         <h1 style="font-size: 3rem;">Coming Soon</h1>
-        <i class="fas fa-code" style="color: #595959; font-size: 16rem;"></i>
+        <i id="img" style="color: #595959; font-size: 16rem;"></i>
         <br>
         <a href="javascript: history.go(-1)">返回</a>
     </div>
+    <script>
+        var c = Marh.random();
+        var img = document.getElementById("img");
+        if(c<0.25) {
+            img.classList.add("fas", "fa-code");
+        } else if(c<0.5) {
+            img.classList.add("fas", "fa-compass");
+        } else if(c<0.75) {
+            img.classList.add("far", "fa-file-alt");
+        } else {
+            img.classList.add("fas", "fa-font");
+        }
+    </script>
 </body>
 </html>
