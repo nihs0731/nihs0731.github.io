@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="source/bar.js" defer></script>
     <title>同學們 - 資訊一忠</title>
 </head>
-
-<body class="w3-container">
+<body>
+    <div class="w3-top w3-white">
+        <div class="w3-bar w3-flat-turquoise w3-card"><a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:bar()" title="Menu"><em class="fa fa-bars"></em></a>
+            <a href="https://nihs0731.github.io/" class="w3-bar-item w3-button w3-padding-large"><strong>資訊一忠</strong></a>
+            <a href="classmates" class="w3-bar-item w3-button w3-padding-large w3-hide-small">同學們</a>
+            <a href="about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">關於我們</a>
+            <a href="contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">聯繫我們</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">其他 <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="curriculum" class="w3-bar-item w3-button">課表</a>
+                    <a href="coming-soon" class="w3-bar-item w3-button">Coming Soon</a>
+                    <a href="coming-soon" class="w3-bar-item w3-button">Coming Soon</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"></a> </div>
+        <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <a href="classmates" class="w3-bar-item w3-button w3-padding-large" onclick="bar()">同學們</a>
+            <a href="about" class="w3-bar-item w3-button w3-padding-large" onclick="bar()">關於我們</a>
+            <a href="contact" class="w3-bar-item w3-button w3-padding-large" onclick="bar()">聯繫我們</a>
+            <a href="curriculum" class="w3-bar-item w3-button w3-padding-large" onclick="bar()">課表</a>
+        </div>
+    </div>
+    <div style="height: 3rem"></div>
+<div class="w3-container">
     <div class="w3-center">
         <h1 style="font-size: 3rem;">同學們</h1>
         <div class="w3-cell-row">
@@ -29,5 +54,6 @@
         </div>
         <a href="javascript: history.go(-1)">返回</a>
     </div>
+</div>
 </body>
 </html>
